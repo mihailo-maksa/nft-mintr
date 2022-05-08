@@ -2,7 +2,11 @@ import React from 'react'
 import { useWeb3React } from '@web3-react/core'
 import { injected } from '../helpers/connector'
 
-const ConnectContext = React.createContext({
+interface Props {
+  children: React.ReactNode
+}
+
+export const ConnectContext = React.createContext({
   isConnected: false,
   chainId: 0,
   connect: () => {},
@@ -11,7 +15,7 @@ const ConnectContext = React.createContext({
   account: null,
 })
 
-export const ConnectProvider = ({ children }) => {
+export const ConnectProvider: React.FC<Props> = ({ children }): JSX.Element => {
   const {
     activate,
     deactivate,
@@ -41,10 +45,12 @@ export const ConnectProvider = ({ children }) => {
     <ConnectContext.Provider
       value={{
         isConnected: active,
+        // @ts-ignore
         chainId,
         connect,
         disconnect,
         library,
+        // @ts-ignore
         account,
       }}
     >

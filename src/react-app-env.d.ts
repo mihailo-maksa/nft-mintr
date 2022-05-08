@@ -1,5 +1,5 @@
 /// <reference types="react-scripts" />
 
-interface window {
+interface Window {
   ethereum: any
 }
