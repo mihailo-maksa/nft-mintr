@@ -1,0 +1,61 @@
+$primary-color: #8f5ae8;
+$dark-mode-primary: #191b1f;
+$dark-mode-secondary: #212429;
+$breakpoint: 992px;
+$breakpoint2: 576px;
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media screen and (max-width: $breakpoint) {
+    padding: 1.5em;
+  }
+
+  @media screen and (max-width: $breakpoint2) {
+    padding: 2em;
+  }
+}
+
+.home-dark-mode {
+  background-color: $dark-mode-secondary;
+  color: #fff;
+}
+
+.features-subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.mint-group {
+  font-size: 1.5em;
+
+  .mint-btn {
+    margin: auto;
+
+    @media screen and (max-width: $breakpoint2) {
+      margin-bottom: 1em;
+      margin-left: 3em;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.matic-logo {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+}
+
+.contract-address {
+  font-size: 0.8em;
+}

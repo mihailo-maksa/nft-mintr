@@ -1,6 +1,6 @@
 {
-  "short_name": "MoonFarm",
-  "name": "Yield farming protocol built to maximize returns on your LP positions",
+  "short_name": "nft-mintr",
+  "name": "A template for an NFT minter site which I commonly use for my clients.",
   "icons": [
     {
       "src": "favicon.ico",
