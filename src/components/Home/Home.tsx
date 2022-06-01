@@ -43,11 +43,10 @@ const Home: React.FC = (): JSX.Element => {
 
         setNftContractAddress(contracts.contracts.MintrNFT.address)
 
-        const nftContract = await getContract(
-          provider,
-          account,
+        const nftContract = new ethers.Contract(
           contracts.contracts.MintrNFT.address,
           contracts.contracts.MintrNFT.abi,
+          provider,
         )
 
         const _mintPrice = await nftContract.price()
